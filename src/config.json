@@ -1,0 +1,9 @@
+{
+  "mongo": {
+    "url" : "CHANGE_THIS"
+  },
+  "express": {
+    "address": "localhost",
+    "port": 3000
+  }
+}

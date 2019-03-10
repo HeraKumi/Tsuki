@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css")
+  each c in chapter
+    .uk-container
+      article.uk-article
+        h1.uk-article-title #{c.title}
+        p.uk-article-meta(style='white-space: pre-wrap') #{c.content}
+        hr
+      article.uk-comment
+        header.uk-comment-header.uk-grid-medium.uk-flex-middle(uk-grid='')
+          .uk-width-expand
+            h4.uk-comment-title.uk-margin-remove
+              label.uk-label Author Notes
+        .uk-comment-body
+          p.
+            #{c.notes}

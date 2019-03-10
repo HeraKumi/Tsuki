@@ -1,0 +1,11 @@
+extends ../layout
+
+block content
+  h1 Create Novel
+  .uk-container
+      form.col.s12(method='POST')
+            input.uk-input(type='text', placeholder="Novel Name", name='novelName')
+            input.uk-input(type='text', placeholder="Novel Author Name", name='novelAuthor')
+            input.uk-input(type='text', placeholder="Novel Covert art url", name='novelCoverArt')
+            input.uk-input(type='text', placeholder="Novel Summary", name='novelSummary')
+            button(type='submit').uk-button create

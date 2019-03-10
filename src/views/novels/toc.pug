@@ -1,0 +1,19 @@
+extends ../layout
+
+block content
+  .uk-container
+    .uk-flex-row
+      each n in novel
+        .uk-column-1-4.uk-column-divider
+          img(src=n.image)
+          
+          h1.uk-h1 #{n.name}
+        p #{n.summary}
+        
+  hr
+  
+  .uk-container
+    .uk-container-expand.uk-align-center
+      ul.uk-list-divider
+        each c in chapter
+          li #{c.title} #[a.uk-button.uk-button-default(href="/novels/" + url + '/' + c._id) Read]

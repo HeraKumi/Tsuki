@@ -1,0 +1,16 @@
+extends ../layout
+
+block content
+    .uk-container
+      each i in novel
+        .uk-card.uk-card-default.uk-grid-collapse.uk-margin(class='uk-child-width-1-5@s', uk-grid='')
+          .uk-card-media-left.uk-cover-container
+            img(src=i.image, class='uk-child-width-1-6@s', uk-cover='')
+            canvas(width='100', height='200')
+          div
+            .uk-card-body
+              h3.uk-card-title #{i.name}
+              .uk-description-list 
+                dd #{i.summary }
+            .uk-card-footer
+              a.uk-button.uk-button-text(href='/novels/' + i._id) Read

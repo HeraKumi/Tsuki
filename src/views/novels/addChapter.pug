@@ -1,0 +1,22 @@
+extends ../layout
+
+block content
+  link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.css")
+  h1 Create Chapter
+  .container
+    .row
+      form.col.s12(method='POST')
+        .row
+          .input-field.col.s6
+            input#first_name.validate(type='text', name='title')
+            label(for='first_name') Title
+          .input-field.col.s6
+            textarea#textarea1.materialize-textarea(name='notes')
+            label(for='textarea1') Author notes
+            .row
+        .row
+          .input-field.col.s12
+            textarea#textarea2.materialize-textarea(name='content')
+            label(for='textarea2') Content
+        button(type='submit').waves-effect.waves-teal.btn-flat create
+  script(src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.js")

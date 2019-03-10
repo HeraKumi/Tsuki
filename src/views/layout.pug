@@ -1,0 +1,12 @@
+doctype html
+html
+    head
+        title #{title} - Tsuki
+        meta(name='viewport', content='width=device-width, initial-scale=1.0')
+        link(rel='stylesheet', href='./../public/css/uikit.css')
+
+    body
+        include partial/header
+        block content
+        script(src='./../public/js/uikit.js')
+        script(src='./../public/js/uikit-icons.js')
